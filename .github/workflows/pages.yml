@@ -18,7 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VITE_BASE: /${{ github.event.repository.name }}/
+      # A user site (<name>.github.io) is served from the domain root; a project site from /<repo>/.
+      VITE_BASE: ${{ endsWith(github.event.repository.name, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
