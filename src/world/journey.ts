@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { World, heightAt, type PhotoSpec } from './world';
-import { photos } from '../data/site';
+import { photos, url } from '../data/site';
 
 const V = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -254,7 +254,7 @@ export class Journey {
       const w = Math.min(maxH * asp, W * S * 0.84);
       const h = w / asp;
       const cx = x + w / 2;
-      specs.push({ src: ph.src, x: cx, y: 0.9 + h / 2, z: rowZ, w, h });
+      specs.push({ src: url(ph.src), x: cx, y: 0.9 + h / 2, z: rowZ, w, h });
       const cap = caps[i];
       if (cap) {
         cap.style.width = `${w / S}px`;

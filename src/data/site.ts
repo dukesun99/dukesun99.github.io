@@ -22,6 +22,9 @@ export type Publication = {
   bibtexUrl?: string;
 };
 
+/** Resolves a root-relative path against the base the site is served from. */
+export const url = (p: string) => (p.startsWith('/') ? import.meta.env.BASE_URL + p.slice(1) : p);
+
 export const publications = pubs as Publication[];
 
 export const chapters = [

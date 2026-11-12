@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { publications, services, shortVenue, splitAuthors, type Publication } from '../data/site';
+import { publications, services, shortVenue, splitAuthors, url, type Publication } from '../data/site';
 
 // Where each topic sits in the sky. Papers settle between the topics they belong to.
 const TOPIC_POS: Record<string, [number, number]> = {
@@ -222,7 +222,7 @@ export function Research() {
                             </button>
                           )}
                           {LINKS.filter(([k]) => p[k]).map(([k, label]) => (
-                            <a key={k} href={p[k] as string} target="_blank" rel="noopener">
+                            <a key={k} href={url(p[k] as string)} target="_blank" rel="noopener">
                               {label}
                             </a>
                           ))}

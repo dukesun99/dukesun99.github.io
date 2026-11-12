@@ -3,7 +3,7 @@ import Lenis from 'lenis';
 import { Journey } from './world/journey';
 import { Swallow } from './components/Swallow';
 import { Research } from './components/Research';
-import { awards, chapters, contact, education, experience, interests, news, photos, projects, skills } from './data/site';
+import { awards, chapters, contact, education, experience, interests, news, photos, projects, skills, url } from './data/site';
 
 // The valley flight passes these in order, newest first; work on the left, study on the right.
 const waypoints = [
@@ -207,7 +207,7 @@ export default function App() {
               </p>
               <h3>{w.title}</h3>
               <p className="org">
-                <img src={w.logo} alt="" />
+                <img src={url(w.logo)} alt="" />
                 {w.org}
               </p>
               <p>{w.text}</p>
@@ -256,7 +256,7 @@ export default function App() {
           </div>
           {photos.map((p) => (
             <figure key={p.src} data-panel="cap" className="panel cap">
-              <img src={p.src} alt={`Yiqun Sun at ${p.place}`} loading="lazy" />
+              <img src={url(p.src)} alt={`Yiqun Sun at ${p.place}`} loading="lazy" />
               <figcaption>
                 <strong>{p.place}</strong>
                 <span>{p.note}</span>
@@ -281,7 +281,7 @@ export default function App() {
                     {l.label}
                   </a>
                 ))}
-                <a href="/publications">Plain-text publication list</a>
+                <a href={url('/publications')}>Plain-text publication list</a>
               </p>
               <footer>© 2026 Yiqun Sun. The world on this page is rendered live in your browser.</footer>
             </div>
