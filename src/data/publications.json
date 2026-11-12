@@ -1,0 +1,424 @@
+[
+  {
+    "id": "ggss",
+    "status": "published",
+    "title": "GGSS: Geodesic-Gated Spherical Steering for Inference-Time Debiasing of Generative Vision-Language Models",
+    "authors": "Yiqun Sun, Junyu Chen, Pengfei Wei, Lawrence B. Hsieh",
+    "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP) Main Conference",
+    "year": "2026",
+    "tags": [
+      "Multi-Modal Models",
+      "Bias & Fairness"
+    ],
+    "arxiv": "2608.25375",
+    "paperUrl": "https://arxiv.org/abs/2608.25375",
+    "codeUrl": "https://github.com/dukesun99/GGSS",
+    "notesUrl": "https://github.com/dukesun99/GGSS/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/GGSS/blob/main/CITATION.bib",
+    "abstract": "Generative vision-language models (VLMs) are increasingly used in human-centered settings, yet they can produce demographically biased outputs even when images differ only in controlled attributes such as perceived race or gender. However, existing inference-time debiasers were largely designed for static embeddings or CLIP-like models rather than generative VLMs. We propose GGSS---Geodesic-Gated Spherical Steering---a norm-preserving intervention that discovers a counterfactual bias subspace on the unit hypersphere, steers visual tokens along geodesic arcs, and uses an adaptive gate to focus correction on tokens that carry stronger demographic signal. We evaluate four generative VLMs against ten adapted inference-time debiasing baselines and prompt-based mitigation under a single operating-point protocol across categorical, pairwise, and occupation-gender bias tests, while also measuring general visual-language capability. GGSS achieves the lowest average bias on all four models, significant on three of four backbones under paired permutation tests, while preserving MMStar accuracy within +/- 0.6 p.p. of the unsteered baseline. Code is available at https://github.com/dukesun99/GGSS.",
+    "published": "2026-08-26",
+    "pdfUrl": "/papers/ggss.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF B"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+  },
+  {
+    "id": "prosodic-sarcasm",
+    "status": "published",
+    "title": "When Models Hear What They Expect: Diagnosing Prosodic Heuristics in Multimodal Sarcasm Detection",
+    "authors": "Yongjian Chen, Pengfei Wei, Yiqun Sun✉, Zhu Li, Lawrence B. Hsieh (✉ Corresponding author)",
+    "venue": "Findings of the Association for Computational Linguistics: EMNLP",
+    "year": "2026",
+    "tags": [
+      "Multi-Modal Models"
+    ],
+    "arxiv": "2608.30204",
+    "paperUrl": "https://arxiv.org/abs/2608.30204",
+    "abstract": "Multimodal Large Language Models (MLLMs) process speech and text jointly, yet whether they exploit prosodic cues for pragmatic inference or rely on surface acoustic patterns has received little systematic investigation. We address this through sarcasm detection, evaluating Qwen2.5-Omni and Qwen3-Omni on Mandarin Chinese and English under five modality conditions that decompose the contributions of lexical content, vocal semantics, and prosodic structure. Adding audio systematically inflates false positives without improving true positive detection. Acoustic error diagnosis reveals that model errors cluster on a shared stereotype of expressive prosody, namely elevated pitch and irregular pausing, that diverges from the actual cues marking sarcasm in both languages. Targeted manipulation of only these two dimensions causally confirms the heuristic, inducing false positive rates of up to 60%. Applying the same manipulation template to Gemini~3 Flash Preview without modification replicates the effect, suggesting that the stereotype extends beyond the Qwen Omni family rather than arising from a single model architecture.",
+    "published": "2026-08-31",
+    "pdfUrl": "/papers/prosodic-sarcasm.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF B"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Findings of the Association for Computational Linguistics: EMNLP 2026"
+  },
+  {
+    "id": "ziprerank",
+    "status": "published",
+    "title": "Very Efficient Listwise Multimodal Reranking for Long Documents",
+    "authors": "Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": "2026",
+    "tags": [
+      "Information Retrieval",
+      "Multi-Modal Models"
+    ],
+    "arxiv": "2605.11864",
+    "paperUrl": "https://arxiv.org/abs/2605.11864",
+    "codeUrl": "https://github.com/dukesun99/ZipRerank",
+    "modelUrl": "https://huggingface.co/mtri-admin/ZipRerank",
+    "notesUrl": "https://github.com/dukesun99/ZipRerank/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/ZipRerank/blob/main/CITATION.bib",
+    "abstract": "Listwise reranking is a key yet computationally expensive component in vision-centric retrieval and multimodal retrieval-augmented generation (M-RAG) over long documents. While recent VLM-based rerankers achieve strong accuracy, their practicality is often limited by long visual-token sequences and multi-step autoregressive decoding. We propose ZipRerank, a highly efficient listwise multimodal reranker that directly addresses both bottlenecks. It reduces input length via a lightweight query-image early interaction mechanism and eliminates autoregressive decoding by scoring all candidates in a single forward pass. To enable effective learning, ZipRerank adopts a two-stage training strategy: (i) listwise pretraining on large-scale text data rendered as images, and (ii) multimodal finetuning with VLM-teacher-distilled soft-ranking supervision. Extensive experiments on the MMDocIR benchmark show that ZipRerank matches or surpasses state-of-the-art multimodal rerankers while reducing LLM inference latency by up to an order of magnitude, making it well-suited for latency-sensitive real-world systems. The code is available at https://github.com/dukesun99/ZipRerank.",
+    "published": "2026-05-12",
+    "pdfUrl": "/papers/ziprerank.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "International Conference on Machine Learning (ICML)"
+  },
+  {
+    "id": "corpus2skill",
+    "status": "published",
+    "title": "Corpus2Skill: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG",
+    "authors": "Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh",
+    "venue": "Findings of the Association for Computational Linguistics: EMNLP",
+    "year": "2026",
+    "tags": [
+      "LLM Agents",
+      "Information Retrieval"
+    ],
+    "arxiv": "2604.14572",
+    "paperUrl": "https://arxiv.org/abs/2604.14572",
+    "codeUrl": "https://github.com/dukesun99/Corpus2Skill",
+    "notesUrl": "https://github.com/dukesun99/Corpus2Skill/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/Corpus2Skill/blob/main/CITATION.bib",
+    "abstract": "Retrieval-Augmented Generation (RAG) grounds LLM responses in external evidence but treats the model as a passive consumer of search results, with no view of how the corpus is organized or what it has not yet seen. We present Corpus2Skill, a system-level retrieval architecture for bounded, structurally coherent corpora such as enterprise knowledge bases: an offline compiler distills the corpus into a hierarchical skill directory, and at serve time an LLM agent navigates it, drilling from a bird's-eye view through progressively finer summaries down to documents and backtracking when a branch is unproductive. On an enterprise customer-support benchmark, Corpus2Skill improves both answer quality and grounding over single-shot dense, hybrid, hierarchical-retrieval, and agentic RAG baselines at a moderate cost tradeoff, and the lead persists under encoder-matched controls and paired significance tests. An eleven-dataset study shows that corpus navigation is not a universal replacement for retrieval: it significantly wins on five datasets, ties on three, and loses on three. It helps on single-domain corpora with a recoverable topical taxonomy, but flat retrieval remains preferable on open-domain factoid pools or homogeneous-tabular corpora that defeat top-level clustering. We characterize this scope distinction as a design guideline for knowledge-grounded systems. Code is available at https://github.com/dukesun99/Corpus2Skill.",
+    "published": "2026-04-16",
+    "pdfUrl": "/papers/corpus2skill.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF B"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Findings of the Association for Computational Linguistics: EMNLP 2026"
+  },
+  {
+    "id": "implicit-embeddings",
+    "status": "published",
+    "title": "Position: Text Embeddings Should Capture Implicit Semantics, Not Just Surface Meaning",
+    "authors": "Yiqun Sun, Qiang Huang, Anthony K. H. Tung, Jun Yu",
+    "venue": "International Conference on Machine Learning (ICML), Position Paper Track",
+    "year": "2026",
+    "tags": [
+      "Representation Learning"
+    ],
+    "arxiv": "2506.08354",
+    "paperUrl": "https://arxiv.org/abs/2506.08354",
+    "codeUrl": "https://github.com/dukesun99/Implicit-Embeddings",
+    "notesUrl": "https://github.com/dukesun99/Implicit-Embeddings/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/Implicit-Embeddings/blob/main/CITATION.bib",
+    "abstract": "This position paper argues that text embedding research should move beyond surface meaning and embrace implicit semantics as a central modeling objective. Text embeddings are a foundational component of modern NLP, underpinning a wide range of applications and driving sustained research progress. Despite rapid progress, most embedding models remain narrowly focused on surface-level semantics, whereas linguistic theory emphasizes that much of human meaning is implicit, shaped by pragmatics, speaker intent, and sociocultural context. Current models are typically trained on datasets that lack such depth and evaluated using benchmarks that reward surface similarity. As a result, they struggle with tasks that require interpretive reasoning, stance recognition, or socially grounded understanding. Our pilot study makes this limitation explicit, showing that even state-of-the-art embeddings achieve only marginal improvements over simple lexical baselines on tasks probing implicit semantics. We therefore call for a paradigm shift: embedding research should prioritize linguistically grounded and diverse training data, develop benchmarks that probe deeper semantic understanding, and treat implicit meaning as a core modeling objective to better align embeddings with real-world language complexity. The code is available at http://github.com/dukesun99/Implicit-Embeddings.",
+    "published": "2025-06-10",
+    "pdfUrl": "/papers/implicit-embeddings.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "International Conference on Machine Learning (ICML)"
+  },
+  {
+    "id": "uvda",
+    "status": "published",
+    "title": "Return of Frustratingly Easy Unsupervised Video Domain Adaptation",
+    "authors": "Pengfei Wei, Yiqun Sun✉, Zhiqiang Xu, Yiping Ke, Lawrence B. Hsieh (✉ Corresponding author)",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": "2026",
+    "tags": [
+      "Domain Adaptation"
+    ],
+    "arxiv": "2605.19510",
+    "paperUrl": "https://arxiv.org/abs/2605.19510",
+    "abstract": "Unsupervised video domain adaptation (UVDA) is a practical but under-explored problem. In this paper, we propose a frustratingly easy UVDA method, called MetaTrans. Specifically, MetaTrans adopts a concise learning objective that contains only two fundamental loss terms. Despite the simplicity of the learning objective, MetaTrans embodies an advanced UVDA idea, that is, handling the spatial and temporal divergence of cross-domain videos separately, through a subtle model architecture design. By implementing a temporal-static subtraction module, MetaTrans effectively removes spatial and temporal divergence. Extensive empirical evaluations, particularly on various cross-domain action recognition tasks, show substantial absolute adaptation performance enhancement and significantly superior relative performance gain compared with state-of-the-art UVDA baselines.",
+    "published": "2026-05-19",
+    "pdfUrl": "/papers/uvda.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "International Conference on Machine Learning (ICML)"
+  },
+  {
+    "id": "deepconnect",
+    "status": "published",
+    "title": "DeepConnect: A Visual Analytics System for Bridging Interdisciplinary Research Collaborations",
+    "authors": "Yingchaojie Feng, Zekai Shao, Yiqun Sun, Yixuan Tang, Anthony K. H. Tung",
+    "venue": "IEEE Transactions on Visualization and Computer Graphics (TVCG)",
+    "year": "2026",
+    "tags": [
+      "Visual Analytics"
+    ],
+    "arxiv": "2608.05134",
+    "paperUrl": "https://arxiv.org/abs/2608.05134",
+    "abstract": "Interdisciplinary research collaboration is crucial for scientific innovation, but it remains difficult to initiate in practice. Existing collaborator discovery approaches are often constrained by disciplinary boundaries and static researcher profiles that do not reflect the specific context of a new collaboration goal. As a result, researchers struggle to translate open-ended collaboration goals into domain-specific tasks, evaluate candidate researchers' fit and complementarity, and establish common ground before initial contact. To address these challenges, we present DeepConnect, an LLM-augmented visual analytics system for interdisciplinary collaborator discovery. DeepConnect translates collaboration ideas into domain-specific tasks, retrieves relevant papers to ground cross-domain exploration, and provides coordinated visualizations for exploring and comparing candidate researchers. It further reveals terminology gaps and overlaps across domains and supports publication-grounded conversation rehearsal to help users prepare for outreach. We evaluate DeepConnect through two case studies, a user study, and a component-level evaluation, showing its value for complementary team formation, idea refinement, and pre-contact preparation. The DeepConnect website is available at https://deepconnect.sg.",
+    "published": "2026-08-05",
+    "pdfUrl": "/papers/deepconnect.pdf",
+    "rank": [
+      "CCF A"
+    ],
+    "kind": "journal",
+    "scholarVenue": "IEEE Transactions on Visualization and Computer Graphics"
+  },
+  {
+    "id": "dkmips",
+    "status": "published",
+    "title": "Balancing Relevance and Diversity in k-Maximum Inner Product Search",
+    "authors": "Qiang Huang, Yanhao Wang, Yiqun Sun, Anthony K. H. Tung, Jun Yu",
+    "venue": "The VLDB Journal, 35(4)",
+    "year": "2026",
+    "tags": [
+      "Diversified Retrieval"
+    ],
+    "arxiv": "2402.13858",
+    "paperUrl": "https://doi.org/10.1007/s00778-026-00982-8",
+    "codeUrl": "https://github.com/dukesun99/PyDkMIPS",
+    "doi": "10.1007/s00778-026-00982-8",
+    "abstract": "The $k$-Maximum Inner Product Search ($k$MIPS) serves as a foundational component in recommender systems and various data mining tasks. However, while most existing $k$MIPS approaches prioritize the efficient retrieval of highly relevant items for users, they often neglect an equally pivotal facet of search results: \\emph{diversity}. To bridge this gap, we revisit and refine the diversity-aware $k$MIPS (D$k$MIPS) problem by incorporating two well-known diversity objectives -- minimizing the average and maximum pairwise item similarities within the results -- into the original relevance objective. This enhancement, inspired by Maximal Marginal Relevance (MMR), offers users a controllable trade-off between relevance and diversity. We introduce \\textsc{Greedy} and \\textsc{DualGreedy}, two linear scan-based algorithms tailored for D$k$MIPS. They both achieve data-dependent approximations and, when aiming to minimize the average pairwise similarity, \\textsc{DualGreedy} attains an approximation ratio of $1/4$ with an additive term for regularization. To further improve query efficiency, we integrate a lightweight Ball-Cone Tree (BC-Tree) index with the two algorithms. Finally, comprehensive experiments on ten real-world data sets demonstrate the efficacy of our proposed methods, showcasing their capability to efficiently deliver diverse and relevant search results to users.",
+    "published": "2024-02-21",
+    "pdfUrl": "/papers/dkmips.pdf",
+    "rank": [
+      "CCF A"
+    ],
+    "kind": "journal",
+    "volume": "35",
+    "issue": "4",
+    "pdfNote": "The hosted PDF is the arXiv preprint (titled “Diversity-Aware k-Maximum Inner Product Search Revisited”); the journal version is available via the DOI.",
+    "scholarVenue": "The VLDB Journal"
+  },
+  {
+    "id": "ps-cbm",
+    "status": "published",
+    "title": "Partially Shared Concept Bottleneck Models",
+    "authors": "Delong Zhao, Qiang Huang, Di Yan, Yiqun Sun, Jun Yu",
+    "venue": "AAAI Conference on Artificial Intelligence (AAAI)",
+    "year": "2026",
+    "tags": [
+      "Interpretability"
+    ],
+    "arxiv": "2511.22170",
+    "paperUrl": "https://arxiv.org/abs/2511.22170",
+    "codeUrl": "https://github.com/7494zdl/PS-CBM",
+    "abstract": "Concept Bottleneck Models (CBMs) enhance interpretability by introducing a layer of human-understandable concepts between inputs and predictions. While recent methods automate concept generation using Large Language Models (LLMs) and Vision-Language Models (VLMs), they still face three fundamental challenges: poor visual grounding, concept redundancy, and the absence of principled metrics to balance predictive accuracy and concept compactness. We introduce PS-CBM, a Partially Shared CBM framework that addresses these limitations through three core components: (1) a multimodal concept generator that integrates LLM-derived semantics with exemplar-based visual cues; (2) a Partially Shared Concept Strategy that merges concepts based on activation patterns to balance specificity and compactness; and (3) Concept-Efficient Accuracy (CEA), a post-hoc metric that jointly captures both predictive accuracy and concept compactness. Extensive experiments on eleven diverse datasets show that PS-CBM consistently outperforms state-of-the-art CBMs, improving classification accuracy by 1.0%-7.4% and CEA by 2.0%-9.5%, while requiring significantly fewer concepts. These results underscore PS-CBM's effectiveness in achieving both high accuracy and strong interpretability.",
+    "published": "2025-11-27",
+    "pdfUrl": "/papers/ps-cbm.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "AAAI Conference on Artificial Intelligence (AAAI)"
+  },
+  {
+    "id": "prism",
+    "status": "published",
+    "title": "PRISM: A Framework for Producing Interpretable Political Bias Embeddings with Political-Aware Cross-Encoder",
+    "authors": "Yiqun Sun, Qiang Huang, Anthony Kum Hoe Tung, Jun Yu",
+    "venue": "Annual Meeting of the Association for Computational Linguistics (ACL) Main Conference (Oral)",
+    "year": "2025",
+    "tags": [
+      "Interpretability",
+      "Representation Learning",
+      "Political Analysis"
+    ],
+    "arxiv": "2505.24646",
+    "doi": "10.18653/v1/2025.acl-long.1344",
+    "paperUrl": "https://aclanthology.org/2025.acl-long.1344/",
+    "codeUrl": "https://github.com/dukesun99/ACL-PRISM",
+    "notesUrl": "https://github.com/dukesun99/ACL-PRISM/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/ACL-PRISM/blob/main/CITATION.bib",
+    "abstract": "Semantic Text Embedding is a fundamental NLP task that encodes textual content into vector representations, where proximity in the embedding space reflects semantic similarity. While existing embedding models excel at capturing general meaning, they often overlook ideological nuances, limiting their effectiveness in tasks that require an understanding of political bias. To address this gap, we introduce PRISM, the first framework designed to Produce inteRpretable polItical biaS eMbeddings. PRISM operates in two key stages: (1) Controversial Topic Bias Indicator Mining, which systematically extracts fine-grained political topics and their corresponding bias indicators from weakly labeled news data, and (2) Cross-Encoder Political Bias Embedding, which assigns structured bias scores to news articles based on their alignment with these indicators. This approach ensures that embeddings are explicitly tied to bias-revealing dimensions, enhancing both interpretability and predictive power. Through extensive experiments on two large-scale datasets, we demonstrate that PRISM outperforms state-of-the-art text embedding models in political bias classification while offering highly interpretable representations that facilitate diversified retrieval and ideological analysis. The source code is available at https://github.com/dukesun99/ACL-PRISM.",
+    "published": "2025-05-30",
+    "pdfUrl": "/papers/prism.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Annual Meeting of the Association for Computational Linguistics (ACL)"
+  },
+  {
+    "id": "gstransform",
+    "status": "published",
+    "title": "Don't Reinvent the Wheel: Efficient Instruction-Following Text Embedding based on Guided Space Transformation",
+    "authors": "Yingchaojie Feng†, Yiqun Sun†, Yandong Sun, Minfeng Zhu, Qiang Huang, Anthony Kum Hoe Tung, Wei Chen (†Equal contribution)",
+    "venue": "Annual Meeting of the Association for Computational Linguistics (ACL) Main Conference (Oral)",
+    "year": "2025",
+    "tags": [
+      "Representation Learning"
+    ],
+    "arxiv": "2505.24754",
+    "doi": "10.18653/v1/2025.acl-long.1196",
+    "paperUrl": "https://aclanthology.org/2025.acl-long.1196/",
+    "codeUrl": "https://github.com/YingchaojieFeng/GSTransform",
+    "abstract": "In this work, we investigate an important task named instruction-following text embedding, which generates dynamic text embeddings that adapt to user instructions, highlighting specific attributes of text. Despite recent advancements, existing approaches suffer from significant computational overhead, as they require re-encoding the entire corpus for each new instruction. To address this challenge, we propose GSTransform, a novel instruction-following text embedding framework based on Guided Space Transformation. Our key observation is that instruction-relevant information is inherently encoded in generic embeddings but remains underutilized. Instead of repeatedly encoding the corpus for each instruction, GSTransform is a lightweight transformation mechanism that adapts pre-computed embeddings in real time to align with user instructions, guided by a small amount of text data with instruction-focused label annotation. We conduct extensive experiments on three instruction-awareness downstream tasks across nine real-world datasets, demonstrating that GSTransform improves instruction-following text embedding quality over state-of-the-art methods while achieving dramatic speedups of 6~300x in real-time processing on large-scale datasets. The source code is available at https://github.com/YingchaojieFeng/GSTransform.",
+    "published": "2025-05-30",
+    "pdfUrl": "/papers/gstransform.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Annual Meeting of the Association for Computational Linguistics (ACL)"
+  },
+  {
+    "id": "cqg-mbqa",
+    "status": "published",
+    "title": "A General Framework for Producing Interpretable Semantic Text Embeddings",
+    "authors": "Yiqun Sun, Qiang Huang, Yixuan Tang, Anthony Kum Hoe Tung, Jun Yu",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": "2025",
+    "tags": [
+      "Interpretability",
+      "Representation Learning"
+    ],
+    "arxiv": "2410.03435",
+    "paperUrl": "https://openreview.net/forum?id=23uY3FpQxc",
+    "codeUrl": "https://github.com/dukesun99/CQG-MBQA",
+    "posterUrl": "https://drive.google.com/file/d/1hHItyL5h3QlqXknjgSrdkXq9ka2ZPyJt/view?usp=sharing",
+    "notesUrl": "https://github.com/dukesun99/CQG-MBQA/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/CQG-MBQA/blob/main/CITATION.bib",
+    "abstract": "Semantic text embedding is essential to many tasks in Natural Language Processing (NLP). While black-box models are capable of generating high-quality embeddings, their lack of interpretability limits their use in tasks that demand transparency. Recent approaches have improved interpretability by leveraging domain-expert-crafted or LLM-generated questions, but these methods rely heavily on expert input or well-prompt design, which restricts their generalizability and ability to generate discriminative questions across a wide range of tasks. To address these challenges, we introduce \\algo{CQG-MBQA} (Contrastive Question Generation - Multi-task Binary Question Answering), a general framework for producing interpretable semantic text embeddings across diverse tasks. Our framework systematically generates highly discriminative, low cognitive load yes/no questions through the \\algo{CQG} method and answers them efficiently with the \\algo{MBQA} model, resulting in interpretable embeddings in a cost-effective manner. We validate the effectiveness and interpretability of \\algo{CQG-MBQA} through extensive experiments and ablation studies, demonstrating that it delivers embedding quality comparable to many advanced black-box models while maintaining inherently interpretability. Additionally, \\algo{CQG-MBQA} outperforms other interpretable text embedding methods across various downstream tasks.",
+    "published": "2024-10-04",
+    "pdfUrl": "/papers/cqg-mbqa.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "conference",
+    "scholarVenue": "International Conference on Learning Representations (ICLR)"
+  },
+  {
+    "id": "newscope",
+    "status": "published",
+    "title": "Uncovering the Bigger Picture: Comprehensive Event Understanding Via Diverse News Retrieval",
+    "authors": "Yixuan Tang, Yuanyuan Shi, Yiqun Sun, Anthony Kum Hoe Tung",
+    "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP) Main Conference (Oral)",
+    "year": "2025",
+    "tags": [
+      "Diversified Retrieval"
+    ],
+    "arxiv": "2508.19758",
+    "paperUrl": "https://arxiv.org/abs/2508.19758",
+    "codeUrl": "https://github.com/tangyixuan/NEWSCOPE",
+    "abstract": "Access to diverse perspectives is essential for understanding real-world events, yet most news retrieval systems prioritize textual relevance, leading to redundant results and limited viewpoint exposure. We propose NEWSCOPE, a two-stage framework for diverse news retrieval that enhances event coverage by explicitly modeling semantic variation at the sentence level. The first stage retrieves topically relevant content using dense retrieval, while the second stage applies sentence-level clustering and diversity-aware re-ranking to surface complementary information. To evaluate retrieval diversity, we introduce three interpretable metrics, namely Average Pairwise Distance, Positive Cluster Coverage, and Information Density Ratio, and construct two paragraph-level benchmarks: LocalNews and DSGlobal. Experiments show that NEWSCOPE consistently outperforms strong baselines, achieving significantly higher diversity without compromising relevance. Our results demonstrate the effectiveness of fine-grained, interpretable modeling in mitigating redundancy and promoting comprehensive event understanding. The data and code are available at https://github.com/tangyixuan/NEWSCOPE.",
+    "published": "2025-08-27",
+    "pdfUrl": "/papers/newscope.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF B"
+    ],
+    "kind": "conference",
+    "scholarVenue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+  },
+  {
+    "id": "diversinews",
+    "status": "published",
+    "title": "DiversiNews: Enriching News Consumption with Relevant Yet Diverse News Articles Retrieval",
+    "authors": "Yiqun Sun, Qiang Huang, Yanhao Wang, Anthony K. H. Tung",
+    "venue": "Proceedings of the VLDB Endowment (PVLDB) 17(12), Demo Track",
+    "year": "2024",
+    "tags": [
+      "Diversified Retrieval",
+      "Political Analysis"
+    ],
+    "doi": "10.14778/3685800.3685854",
+    "paperUrl": "https://www.vldb.org/pvldb/vol17/p4277-huang.pdf",
+    "codeUrl": "https://github.com/dukesun99/DiversiNews",
+    "posterUrl": "https://drive.google.com/file/d/1m51e8WpztsmxLxtguQjxOf25e-FwtZwn/view?usp=sharing",
+    "videoUrl": "https://drive.google.com/file/d/1TkywjYoevyz1BKFxKgbHFZaeQXoIzPSf/view?usp=sharing",
+    "notesUrl": "https://github.com/dukesun99/DiversiNews/blob/main/docs/research-context.md",
+    "bibtexUrl": "https://github.com/dukesun99/DiversiNews/blob/main/CITATION.bib",
+    "abstract": "In the digital age, where echo chambers on social media and news platforms increasingly shape public opinion, there is a growing need for tools that present news consumers with a broad spectrum of perspectives. To this end, we introduce DiversiNews, a novel system designed to diversify news consumption by providing readers with articles that are not only relevant to their interests but also offer a variety of viewpoints. DiversiNews leverages state-of-the-art semantic text encoding techniques and implements advanced Diversity-aware k -Maximum Inner Product Search (D k MIPS) algorithms. Our demonstration highlights the potential of DiversiNews to broaden users' exposure to different viewpoints, thereby countering the polarizing effect of digital echo chambers. We showcase how DiversiNews can enrich the news reading experience, supporting the development of a more informed and balanced public discourse in digital news consumption applications.",
+    "published": "2024-08",
+    "pdfUrl": "/papers/diversinews.pdf",
+    "rank": [
+      "CORE A*",
+      "CCF A"
+    ],
+    "kind": "journal",
+    "volume": "17",
+    "issue": "12",
+    "firstpage": "4277",
+    "lastpage": "4280",
+    "scholarVenue": "Proceedings of the VLDB Endowment"
+  },
+  {
+    "id": "ir-misses-the-mark",
+    "status": "preprint",
+    "title": "Information Retrieval Misses the Mark for LLM Agents",
+    "authors": "Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh",
+    "venue": "SSRN preprint (position paper)",
+    "year": "2026",
+    "tags": [
+      "LLM Agents",
+      "Information Retrieval"
+    ],
+    "doi": "10.2139/ssrn.6903579",
+    "paperUrl": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6903579",
+    "abstract": "Current widely deployed LLM agents often retrieve information using simple rule-based tools, such as grep, rather than learned encoders, vector indices, or rerankers; industry commentary has captured this shift with the slogan \"RAG is dead, agents just need grep.\" Although we reject the claim that retrieval is obsolete, we argue that existing information retrieval (IR) research cannot yet comprehensively satisfy the information needs of LLM agents. The retrieval substrate of the agent era is real and deployed, yet it is poorly captured by standard IR formulations and benchmarks. This misalignment is structural across five dimensions: today's IR stack assumes the wrong corpus, the wrong input, the wrong objective, the wrong episode, and the wrong retrievable for agents that plan, browse, call tools, manage memory, and decide whether to continue searching. We argue that the productive next step is to reformulate retrieval for agents as a state-conditioned evidence-acquisition policy. We organize existing agentic RAG and reasoning-search systems under a taxonomy and a formal model, run a direct test of the misalignment by holding the agent constant and varying only the retrieval substrate (BM25, vector, grep, hybrid, closed-book) on HotpotQA-distractor and 2WikiMultihopQA over a 100K Wikipedia corpus, and propose a five-direction research agenda with dual-track evaluation.",
+    "published": "2026-07-01",
+    "kind": "preprint",
+    "pdfUrl": "/papers/ir-misses-the-mark.pdf"
+  },
+  {
+    "id": "sae-firewalls",
+    "status": "preprint",
+    "title": "Sparse Autoencoders as Plug-and-Play Firewalls for Adversarial Attack Detection in VLMs",
+    "authors": "Hao Wang, Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh, Daisuke Kawahara",
+    "venue": "arXiv preprint",
+    "year": "2026",
+    "tags": [
+      "Multi-Modal Models",
+      "Safety & Robustness"
+    ],
+    "arxiv": "2605.07447",
+    "paperUrl": "https://arxiv.org/abs/2605.07447",
+    "abstract": "Vision-language models (VLMs) have advanced rapidly and are increasingly deployed in real-world applications, especially with the rise of agent-based systems. However, their safety has received relatively limited attention. Even the latest proprietary and open-weight VLMs remain highly vulnerable to adversarial attacks, leaving downstream applications exposed to significant risks. In this work, we propose a novel and lightweight adversarial attack detection framework based on sparse autoencoders (SAEs), termed SAEgis. By inserting an SAE module into a pretrained VLM and training it with standard reconstruction objectives, we find that the learned sparse latent features naturally capture attack-relevant signals. These features enable reliable classification of whether an input image has been adversarially perturbed, even for previously unseen samples. Extensive experiments show that SAEgis achieves strong performance across in-domain, cross-domain, and cross-attack settings, with particularly large improvements in cross-domain generalization compared to existing baselines. In addition, combining signals from multiple layers further improves robustness and stability. To the best of our knowledge, this is the first work to explore SAE as a plug-and-play mechanism for adversarial attack detection in VLMs. Our method requires no additional adversarial training, introduces minimal overhead, and provides a practical approach for improving the safety of real-world VLM systems.",
+    "published": "2026-05-08",
+    "pdfUrl": "/papers/sae-firewalls.pdf",
+    "kind": "preprint"
+  },
+  {
+    "id": "orchmas",
+    "status": "preprint",
+    "title": "OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents",
+    "authors": "Yichao Feng, Haoran Luo, Zhenghong Lin, Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh, Anh Tuan Luu",
+    "venue": "arXiv preprint",
+    "year": "2026",
+    "tags": [
+      "LLM Agents"
+    ],
+    "arxiv": "2603.03005",
+    "paperUrl": "https://arxiv.org/abs/2603.03005",
+    "abstract": "Multi-agent large language model frameworks are promising for complex multi step reasoning, yet existing systems remain weak for scientific and knowledge intensive domains due to static prompts and agent roles, rigid workflows, and homogeneous model reliance, leading to poor domain adaptation, limited reasoning flexibility, and high latency on heterogeneous or long-horizon scientific tasks. They also struggle to revise earlier decisions when intermediate reasoning diverges, reducing reliability in structured and calculation heavy settings. To address these limitations, we propose a scientific domain oriented interactive two tier multi model orchestration framework. A dedicated orchestration model analyzes each task, dynamically constructs a domain aware reasoning pipeline, and instantiates specialized expert agents with tailored prompts, while an execution model performs each step under generated role and instruction specifications. The orchestrator iteratively updates the pipeline based on intermediate feedback, enabling dynamic replanning, role reallocation, and prompt refinement across multi turn interactions, strengthening robustness and specialization for scientific reasoning through structured heterogeneous model collaboration. The framework is model agnostic and supports heterogeneous LLM integration with different capacities or costs, enabling flexible performance efficiency trade offs in practical scientific deployments. Experiments show consistent improvements over existing multi agent systems and strong baselines across diverse reasoning and scientific style benchmarks.",
+    "published": "2026-03-03",
+    "pdfUrl": "/papers/orchmas.pdf",
+    "kind": "preprint"
+  },
+  {
+    "id": "one-swallow",
+    "status": "preprint",
+    "title": "One Swallow Does Not Make a Summer: Understanding Semantic Structures in Embedding Spaces",
+    "authors": "Yandong Sun, Qiang Huang, Ziwei Xu, Yiqun Sun, Yixuan Tang, Anthony K. H. Tung",
+    "venue": "arXiv preprint",
+    "year": "2025",
+    "tags": [
+      "Interpretability"
+    ],
+    "paperUrl": "https://arxiv.org/abs/2512.00852",
+    "arxiv": "2512.00852",
+    "abstract": "Embedding spaces are fundamental to modern AI, translating raw data into high-dimensional vectors that encode rich semantic relationships. Yet, their internal structures remain opaque, with existing approaches often sacrificing semantic coherence for structural regularity or incurring high computational overhead to improve interpretability. To address these challenges, we introduce the Semantic Field Subspace (SFS), a geometry-preserving, context-aware representation that captures local semantic neighborhoods within the embedding space. We also propose SAFARI (SemAntic Field subspAce deteRmInation), an unsupervised, modality-agnostic algorithm that uncovers hierarchical semantic structures using a novel metric called Semantic Shift, which quantifies how semantics evolve as SFSes evolve. To ensure scalability, we develop an efficient approximation of Semantic Shift that replaces costly SVD computations, achieving a 15~30x speedup with average errors below 0.01. Extensive evaluations across six real-world text and image datasets show that SFSes outperform standard classifiers not only in classification but also in nuanced tasks such as political bias detection, while SAFARI consistently reveals interpretable and generalizable semantic hierarchies. This work presents a unified framework for structuring, analyzing, and scaling semantic understanding in embedding spaces.",
+    "published": "2025-11-30",
+    "pdfUrl": "/papers/one-swallow.pdf",
+    "kind": "preprint"
+  }
+]
